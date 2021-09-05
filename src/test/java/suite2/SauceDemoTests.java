@@ -48,25 +48,26 @@ public class SauceDemoTests {
 		String title = driver.getTitle();
 		System.out.println(title);
 		//My Store
-		AssertJUnit.assertTrue(title.equals(header ));
+		AssertJUnit.assertTrue(title.equals(header));
 
 	}	
 
 	//Login
 
 	@Test(enabled = true, priority = 1)
-	public void login() {
+	public void login() throws InterruptedException {
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		driver.findElement(By.className("btn_action")).click();
-		AssertJUnit.assertTrue(driver.findElement(By.className("product_label")).getText()
-				.equals("Products"));
+		Thread.sleep(3000);
+		AssertJUnit.assertTrue(driver.findElement(By.className("title")).getText().equals("Products"));
 	}
 
 	//Before test
 	@BeforeTest
 	public void beforeTest() {
-
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ahuaraca\\Desktop\\projects\\Ci-course-project\\drivers\\chromedriver.exe");
+			
 		//Instantiate browser based on user input
 
 		if(browser != "" && browser != null) {
