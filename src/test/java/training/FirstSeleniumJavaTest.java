@@ -43,7 +43,8 @@ public class FirstSeleniumJavaTest {
 	}	
 
 	@BeforeTest
-	public void beforeTest() {	
+	public void beforeTest() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ahuaraca\\Desktop\\projects\\Ci-course-project\\drivers\\chromedriver.exe");
 	    driver = new ChromeDriver();  
 	}		
 	@AfterTest
