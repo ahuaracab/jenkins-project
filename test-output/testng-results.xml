@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-05T17:11:55Z" name="Default suite" finished-at="2021-09-05T17:12:22Z" duration-ms="26572">
+  <suite started-at="2021-09-06T14:37:50Z" name="Parallel Test Suite" finished-at="2021-09-06T14:38:21Z" duration-ms="30966">
     <groups>
     </groups>
-    <test started-at="2021-09-05T17:11:55Z" name="Default test" finished-at="2021-09-05T17:12:22Z" duration-ms="26572">
+    <test started-at="2021-09-06T14:37:50Z" name="OpenCartTest" finished-at="2021-09-06T14:38:18Z" duration-ms="27920">
       <class name="suite1.OpenCartTests">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:suite1.OpenCartTests@5170bcf4]" started-at="2021-09-05T12:11:55Z" name="beforeTest" finished-at="2021-09-05T12:11:57Z" duration-ms="2121" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:suite1.OpenCartTests@385e9564]" started-at="2021-09-06T09:37:50Z" name="beforeTest" finished-at="2021-09-06T09:37:54Z" duration-ms="3763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="launchSite()[pri:0, instance:suite1.OpenCartTests@5170bcf4]" started-at="2021-09-05T12:11:57Z" name="launchSite" finished-at="2021-09-05T12:12:21Z" duration-ms="23423" status="PASS">
+        <test-method signature="launchSite()[pri:0, instance:suite1.OpenCartTests@385e9564]" started-at="2021-09-06T09:37:54Z" name="launchSite" finished-at="2021-09-06T09:38:17Z" duration-ms="22348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSite -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:suite1.OpenCartTests@5170bcf4]" started-at="2021-09-05T12:12:21Z" name="afterTest" finished-at="2021-09-05T12:12:22Z" duration-ms="1002" status="PASS">
+        <test-method signature="searchForProduct()[pri:0, instance:suite1.OpenCartTests@385e9564]" started-at="2021-09-06T09:38:17Z" name="searchForProduct" finished-at="2021-09-06T09:38:17Z" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForProduct -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:suite1.OpenCartTests@385e9564]" started-at="2021-09-06T09:38:17Z" name="afterTest" finished-at="2021-09-06T09:38:18Z" duration-ms="1144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- suite1.OpenCartTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- OpenCartTest -->
+    <test started-at="2021-09-06T14:37:50Z" name="SaceDemoTest" finished-at="2021-09-06T14:38:21Z" duration-ms="30966">
+      <class name="suite2.SauceDemoTests">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:suite2.SauceDemoTests@6e509ffa]" started-at="2021-09-06T09:37:50Z" name="beforeTest" finished-at="2021-09-06T09:37:54Z" duration-ms="3763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="open()[pri:0, instance:suite2.SauceDemoTests@6e509ffa]" started-at="2021-09-06T09:37:54Z" name="open" finished-at="2021-09-06T09:38:17Z" duration-ms="22550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open -->
+        <test-method signature="login()[pri:1, instance:suite2.SauceDemoTests@6e509ffa]" started-at="2021-09-06T09:38:17Z" name="login" finished-at="2021-09-06T09:38:20Z" duration-ms="3546" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at suite2.SauceDemoTests.login(SauceDemoTests.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:suite2.SauceDemoTests@6e509ffa]" started-at="2021-09-06T09:38:20Z" name="afterTest" finished-at="2021-09-06T09:38:21Z" duration-ms="1078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- suite2.SauceDemoTests -->
+    </test> <!-- SaceDemoTest -->
+  </suite> <!-- Parallel Test Suite -->
 </testng-results>
