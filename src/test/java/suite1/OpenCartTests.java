@@ -28,7 +28,7 @@ public class OpenCartTests {
 	String query = "Macbook Air";
 
 
-	//Test to launch browser with url
+	//Test to launch browser with URL
 	@Test
 	public void launchSite() {
 		driver.get(url); 
